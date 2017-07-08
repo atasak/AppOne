@@ -1,0 +1,4 @@
+<div #div [attr.class]="'window ' + direction" [ngStyle]="style()" (window:resize)="resize()">
+    <ng-content></ng-content>
+</div>
+<div [attr.class]="'divider ' + direction" (mousedown)="down($event)" (window:mousemove)="move($event)"></div>
