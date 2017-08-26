@@ -9,7 +9,7 @@ type Direction = 'horizontal' | 'vertical';
     selector: 'one-window',
 })
 export class OneWindowComponent {
-    @Input('size') _size: string = '50';
+    @Input('size') _size = '50';
     get size(): number {
         return Number(this._size);
     }
@@ -18,7 +18,7 @@ export class OneWindowComponent {
     @ViewChild('div') div;
 
     host: OneWindowSplitComponent;
-    windowPercentage: number = 0;
+    windowPercentage = 0;
     dragging = false;
     dragpos: number;
 
