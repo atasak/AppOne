@@ -1,0 +1,11 @@
+<ng-content select="one-navbar"></ng-content>
+<div class="body">
+    <one-windowsplit>
+        <one-window [size]="20">
+            <ng-content select="one-sidebar"></ng-content>
+        </one-window>
+        <one-window>
+            <ng-content select="[body]"></ng-content>
+        </one-window>
+    </one-windowsplit>
+</div>
