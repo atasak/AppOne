@@ -50,7 +50,6 @@ export class OneWindowComponent {
     }
 
     down(e) {
-        console.log("start dragging");
         this.dragging = true;
         this.dragpos = this.pos(e);
     }

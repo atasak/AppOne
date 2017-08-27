@@ -4,8 +4,10 @@ import {Component} from '@angular/core';
     moduleId: module.id,
     template: `
         <one-page>
-            <one-navbar></one-navbar>
-            <one-sidebar></one-sidebar>
+            <one-navbar navbar></one-navbar>
+            <mock-sidebar sidebar>
+                <one-item-group heading="testhead"></one-item-group>
+            </mock-sidebar>
             <mock-windowsplit body></mock-windowsplit>
         </one-page>
     `,
