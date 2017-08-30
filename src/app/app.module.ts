@@ -1,28 +1,34 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {OneWindowComponent, OneWindowSplitComponent} from './components/windowsplit.component/component';
-import {OneSidebarComponent} from './components/sidebar.component/component';
-import {OnePopupComponent} from './components/popup.component/component';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {OneNavbarComponent} from './components/navbar.component/component';
-import {OneWindowSplitHost} from './components/windowsplit.component/host.mock';
 import {OnePageComponent} from './components/page.component/component';
 import {OnePageHost} from './components/page.component/host.mock';
-import {OneItemGroupComponent} from './components/sidebar.component/group.component/component';
+import {OnePopupComponent} from './components/popup.component/component';
+import {OneSidebarComponent} from './components/sidebar.component/component';
+import {OneSidebarDropdownComponent} from './components/sidebar.component/dropdown.component/component';
+import {OneSidebarGroupComponent} from './components/sidebar.component/group.component/component';
 import {OneSidebarHost} from './components/sidebar.component/host.mock';
+import {OneWindowComponent, OneWindowSplitComponent} from './components/windowsplit.component/component';
+import {OneWindowSplitHost} from './components/windowsplit.component/host.mock';
+
+const components = [OneWindowComponent, OneWindowSplitComponent, OneSidebarComponent, OnePopupComponent, OneNavbarComponent,
+    OnePageComponent, OneSidebarGroupComponent, OneSidebarDropdownComponent];
 
 @NgModule({
     declarations: [
-        OneWindowSplitComponent, OneWindowComponent, OneSidebarComponent, OnePopupComponent, OneNavbarComponent, OneWindowSplitHost, OnePageComponent, OnePageHost, OneItemGroupComponent, OneSidebarHost,
+        OneWindowComponent, OneWindowSplitComponent, OneSidebarComponent, OnePopupComponent, OneNavbarComponent,
+        OnePageComponent, OneSidebarGroupComponent, OneWindowSplitHost, OnePageHost, OneSidebarHost, OneSidebarDropdownComponent,
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        BrowserAnimationsModule,
     ],
     bootstrap: [
-        OnePageHost
+        OnePageHost,
     ],
-    exports: [
-        OnePopupComponent, OneNavbarComponent, OneSidebarComponent, OneWindowSplitComponent, OneWindowComponent,
-    ],
+    exports: components,
+    entryComponents: components,
 })
 export class AppModule {
 }

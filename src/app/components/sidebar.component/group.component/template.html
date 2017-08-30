@@ -1,1 +1,8 @@
-<p>{{heading}}</p>
+<ul class="nav nav-pills nav-stacked group-header">
+    <li (click)="click()">
+        <a>{{heading}}<span *ngIf="collapsable != 'false'" class="caret" [@caret]="caret"></span></a>
+    </li>
+</ul>
+<ul class="nav nav-pills nav-stacked group-body" @groupFolding *ngIf="open">
+    <ng-content></ng-content>
+</ul>

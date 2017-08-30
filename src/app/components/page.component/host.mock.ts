@@ -5,9 +5,7 @@ import {Component} from '@angular/core';
     template: `
         <one-page>
             <one-navbar navbar></one-navbar>
-            <mock-sidebar sidebar>
-                <one-item-group heading="testhead"></one-item-group>
-            </mock-sidebar>
+            <mock-sidebar sidebar></mock-sidebar>
             <mock-windowsplit body></mock-windowsplit>
         </one-page>
     `,
