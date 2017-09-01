@@ -12,8 +12,12 @@ import {Component} from '@angular/core';
             <one-sidebar-group [heading]="'Test2'">
                 <li><a>Hello</a></li>
                 <li><a>Helloo</a></li>
-                <li class="dropdown">
-                    <one-sidebar-dropdown title="dropdown"></one-sidebar-dropdown>
+                <li class="dropdown"><a>dropdown<span class="caret"></span></a>
+                    <ul class="dropdown-menu show">
+                        <li><a>dd 1</a></li>
+                        <li><a>dd 2</a></li>
+                        <li><a>dd 3</a></li>
+                    </ul>
                 </li>
             </one-sidebar-group>
         </one-sidebar>
