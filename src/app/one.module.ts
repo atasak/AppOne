@@ -31,5 +31,5 @@ const components = [OneWindowComponent, OneWindowSplitComponent, OneSidebarCompo
     exports: components,
     entryComponents: components,
 })
-export class AppModule {
+export class OneModule {
 }
