@@ -1,7 +1,7 @@
 <ul class="dropdown-menu" *ngIf="model.open" (document:click)="close($event)" (document:context)="close($event)" [style.top]="model.top" [style.left]="model.left">
     <li *ngFor="let item of model.items">
         <a (click)="item.clickEvent($event)" (dblclick)="item.dblclickEvent($event)"
-           (contextmenu)="item.contextEvent($event)">{{item.text}}</a>
+           (contextmenu)="item.contextEvent($event)" [routerLink]="item.routerLinkAttribute">{{item.text}}</a>
         <one-menu-display dropdown *ngIf="item.dropdown" model="item.dropdown"></one-menu-display>
         <one-menu-display context *ngIf="item.contextmenu" model="item.context"></one-menu-display>
     </li>

@@ -5,6 +5,7 @@ import {
     ElementRef,
     EventEmitter,
     forwardRef,
+    Input,
     Output,
     QueryList,
 } from '@angular/core';
@@ -19,6 +20,11 @@ export class OneItemComponent implements AfterViewInit {
     @Output() click = new EventEmitter<MouseEvent>();
     @Output() dblclick = new EventEmitter<MouseEvent>();
     @Output() context = new EventEmitter<MouseEvent>();
+    @Input() routerLink = 'false';
+
+    get routerLinkAttribute() {
+        return this.routerLink === 'false' ? null : this.routerLink;
+    }
 
     @ContentChildren(forwardRef(() => OneMenuComponent)) menus: QueryList<OneMenuComponent>;
     dropdown: OneMenuComponent = null;

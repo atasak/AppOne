@@ -9,7 +9,8 @@
     </ul>
     <ul class="nav nav-pills nav-stacked group-body" @groupFolding *ngIf="group.open">
         <li *ngFor="let item of group.items" @groupFolding>
-            <a (click)="item.clickEvent($event)" (dblclick)="item.dblclickEvent($event)" (contextmenu)="item.contextEvent($event)">{{item.text}}</a>
+            <a (click)="item.clickEvent($event)" (dblclick)="item.dblclickEvent($event)"
+               (contextmenu)="item.contextEvent($event)" [routerLink]="item.routerLinkAttribute">{{item.text}}</a>
             <one-menu-display dropdown *ngIf="item.dropdown" [model]="item.dropdown"></one-menu-display>
             <one-menu-display context *ngIf="item.contextmenu" [model]="item.contextmenu"></one-menu-display>
         </li>
