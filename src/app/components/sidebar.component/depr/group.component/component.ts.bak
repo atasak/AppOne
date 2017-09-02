@@ -4,7 +4,7 @@ import {Component, Input} from '@angular/core';
 @Component({
     moduleId: module.id,
     templateUrl: 'template.html',
-    styleUrls: ['../style.less'],
+    styleUrls: ['../../style.less'],
     selector: 'one-sidebar-group',
     animations: [
         trigger('groupFolding', [

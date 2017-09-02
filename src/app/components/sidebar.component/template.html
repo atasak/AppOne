@@ -1,3 +1,17 @@
 <div class="hidden">
     <ng-content></ng-content>
 </div>
+<ng-container *ngFor="let group of groups">
+    <ul class="nav nav-pills nav-stacked group-header" @groupFolding>
+        <li (click)="group.click()">
+            <a>{{group.heading}}<span *ngIf="group.collapsable != 'false'" class="caret" [@caret]="group.caret"></span></a>
+        </li>
+    </ul>
+    <ul class="nav nav-pills nav-stacked group-body" @groupFolding *ngIf="group.open">
+        <li *ngFor="let item of group.items" @groupFolding>
+            <a (click)="item.clickEvent($event)" (dblclick)="item.dblclickEvent($event)" (contextmenu)="item.contextEvent($event)">{{item.text}}</a>
+            <one-menu-display dropdown *ngIf="item.dropdown" [model]="item.dropdown"></one-menu-display>
+            <one-menu-display context *ngIf="item.contextmenu" [model]="item.contextmenu"></one-menu-display>
+        </li>
+    </ul>
+</ng-container>

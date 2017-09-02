@@ -81,9 +81,9 @@ export class OneWindowSplitComponent implements AfterViewInit {
 
     get size(): number {
         return {
-                horizontal: () => this.div.nativeElement.offsetWidth,
-                vertical: () => this.div.nativeElement.offsetHeight,
-            }[this.direction]();
+            horizontal: () => this.div.nativeElement.offsetWidth,
+            vertical: () => this.div.nativeElement.offsetHeight,
+        }[this.direction]();
     }
 
     getChildSize(component: OneWindowComponent): string {
