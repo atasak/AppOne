@@ -11,6 +11,7 @@ import {OneSidebarComponent, OneSidebarGroupComponent} from './components/sideba
 import {OneSidebarHost} from './components/sidebar.component/host.mock';
 import {OneWindowComponent, OneWindowSplitComponent} from './components/windowsplit.component/component';
 import {OneWindowSplitHost} from './components/windowsplit.component/host.mock';
+import {RouterModule} from '@angular/router';
 
 const components = [OneWindowComponent, OneWindowSplitComponent, OneSidebarComponent, OnePopupComponent, OneNavbarComponent,
     OnePageComponent, OneSidebarGroupComponent, OneItemComponent, OneMenuComponent, OneMenuDisplayComponent];
@@ -24,6 +25,7 @@ const components = [OneWindowComponent, OneWindowSplitComponent, OneSidebarCompo
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        RouterModule,
     ],
     bootstrap: [
         OnePageHost,
