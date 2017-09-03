@@ -4,7 +4,7 @@ import {Component, OnInit} from '@angular/core';
     moduleId: module.id,
     template: `
         <one-sidebar>
-            <one-sidebar-group [heading]="'testhead'" collapsable>
+            <one-sidebar-group [heading]="'testhead with long title to test text wrapping'" collapsable>
                 <one-item *ngFor="let i of [1,2,3,4]" (click)="log('click')" (dblclick)="log('dblclick')">Test {{i}}
                 </one-item>
                 <one-item *ngIf="showEl">dissappears</one-item>
