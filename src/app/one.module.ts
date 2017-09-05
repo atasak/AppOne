@@ -16,13 +16,6 @@ import {OneWindowSplitHost} from './components/windowsplit.component/host.mock';
 const components = [OneWindowComponent, OneWindowSplitComponent, OneSidebarComponent, OnePopupComponent, OneNavbarComponent,
     OnePageComponent, OneSidebarGroupComponent, OneItemComponent, OneMenuComponent, OneMenuDisplayComponent];
 
-const appRoutes: Routes = [
-    {
-        path: '**',
-        component: OneWindowSplitHost,
-    },
-];
-
 @NgModule({
     declarations: [
         OneWindowComponent, OneWindowSplitComponent, OneSidebarComponent, OnePopupComponent, OneNavbarComponent,
@@ -32,7 +25,7 @@ const appRoutes: Routes = [
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        RouterModule.forRoot(appRoutes),
+        RouterModule,
     ],
     bootstrap: [
         OnePageHost,
