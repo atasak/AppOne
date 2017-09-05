@@ -6,7 +6,7 @@ import {OneItemComponent} from '../common/item';
 @Component({
     moduleId: module.id,
     templateUrl: '../common/content.html',
-    styleUrls: ['style.less'],
+    styleUrls: ['style.scss'],
     selector: 'one-sidebar-group',
 })
 export class OneSidebarGroupComponent implements AfterViewInit {
@@ -38,7 +38,7 @@ export class OneSidebarGroupComponent implements AfterViewInit {
 @Component({
     moduleId: module.id,
     templateUrl: 'template.html',
-    styleUrls: ['style.less'],
+    styleUrls: ['style.scss'],
     selector: 'one-sidebar',
     animations: [
         trigger('groupFolding', [

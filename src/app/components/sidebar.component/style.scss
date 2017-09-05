@@ -1,0 +1,31 @@
+@import '../../../styles/bootstrap/variables';
+
+.group-header {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.group-body {
+    display: block;
+    overflow: hidden;
+    transition: height .5s ease-out;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 100%;
+}
+
+ul.nav > li {
+    width: 100%;
+
+    > a {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: $gray-200;
+        }
+    }
+}
