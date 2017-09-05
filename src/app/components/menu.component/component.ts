@@ -35,7 +35,7 @@ export class OneMenuComponent extends ItemList implements AfterViewInit {
 @Component({
     moduleId: module.id,
     templateUrl: 'template.html',
-    styleUrls: ['style.less'],
+    styleUrls: ['style.scss'],
     selector: 'one-menu-display',
 })
 export class OneMenuDisplayComponent {

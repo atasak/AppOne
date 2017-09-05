@@ -5,7 +5,7 @@ type Direction = 'horizontal' | 'vertical';
 @Component({
     moduleId: module.id,
     templateUrl: 'template.window.html',
-    styleUrls: ['style.less'],
+    styleUrls: ['style.scss'],
     selector: 'one-window',
 })
 export class OneWindowComponent {
@@ -67,7 +67,7 @@ export class OneWindowComponent {
 @Component({
     moduleId: module.id,
     templateUrl: 'template.split.html',
-    styleUrls: ['style.less'],
+    styleUrls: ['style.scss'],
     selector: 'one-windowsplit',
 })
 export class OneWindowSplitComponent implements AfterViewInit {

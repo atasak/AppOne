@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
         <one-page>
             <one-navbar navbar></one-navbar>
             <mock-sidebar sidebar></mock-sidebar>
-            <mock-windowsplit body></mock-windowsplit>
+            <router-outlet body></router-outlet>
         </one-page>
     `,
     selector: 'mock-page',
