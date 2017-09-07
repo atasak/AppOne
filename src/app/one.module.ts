@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule} from '@angular/router';
 import {OneItemComponent} from './components/common/item';
 import {OneMenuComponent, OneMenuDisplayComponent} from './components/menu.component/component';
 import {OneNavbarComponent} from './components/navbar.component/component';
@@ -25,7 +25,7 @@ const components = [OneWindowComponent, OneWindowSplitComponent, OneSidebarCompo
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        RouterModule,
+        RouterModule.forRoot([]),
     ],
     bootstrap: [
         OnePageHost,
