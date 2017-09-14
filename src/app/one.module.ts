@@ -17,7 +17,7 @@ const components = [OneWindowComponent, OneWindowSplitComponent, OnePageComponen
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        RouterModule,
+        RouterModule.forRoot([]),
         BoundSensorModule,
     ],
     exports: components,

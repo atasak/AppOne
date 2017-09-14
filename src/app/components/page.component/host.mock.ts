@@ -6,10 +6,11 @@ import {Component} from '@angular/core';
         <one-page>
             <one-navbar navbar></one-navbar>
             <mock-sidebar sidebar></mock-sidebar>
-            <router-outlet body></router-outlet>
+            <mock-windowsplit body></mock-windowsplit>
         </one-page>
     `,
-    selector: 'mock-page',
+    selector: 'mock-page', // tslint:disable-line
 })
+// tslint:disable-next-line
 export class OnePageHost {
 }
