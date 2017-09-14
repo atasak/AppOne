@@ -1,0 +1,4 @@
+<div #viewport class="viewport" (scroll)="scroll($event)">
+    <div [style.height]="height"></div>
+    <div class="dataview" [style.top]="top"><ng-content></ng-content></div>
+</div>

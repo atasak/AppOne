@@ -1,0 +1,17 @@
+div.viewport {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+div.scrollenabler {
+}
+
+div.dataview {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}

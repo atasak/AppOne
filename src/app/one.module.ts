@@ -1,34 +1,24 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {RouterModule, Routes} from '@angular/router';
-import {OneItemComponent} from './components/common/item';
-import {OneMenuComponent, OneMenuDisplayComponent} from './components/menu.component/component';
+import {RouterModule} from '@angular/router';
+import {BoundSensorModule} from 'angular-bound-sensor';
+import {OneListviewComponent} from './components/listview.component/component';
 import {OneNavbarComponent} from './components/navbar.component/component';
 import {OnePageComponent} from './components/page.component/component';
-import {OnePageHost} from './components/page.component/host.mock';
-import {OnePopupComponent} from './components/popup.component/component';
-import {OneSidebarComponent, OneSidebarGroupComponent} from './components/sidebar.component/component';
-import {OneSidebarHost} from './components/sidebar.component/host.mock';
 import {OneWindowComponent, OneWindowSplitComponent} from './components/windowsplit.component/component';
-import {OneWindowSplitHost} from './components/windowsplit.component/host.mock';
 
-const components = [OneWindowComponent, OneWindowSplitComponent, OneSidebarComponent, OnePopupComponent, OneNavbarComponent,
-    OnePageComponent, OneSidebarGroupComponent, OneItemComponent, OneMenuComponent, OneMenuDisplayComponent];
+const components = [OneWindowComponent, OneWindowSplitComponent, OnePageComponent, OneNavbarComponent, OneListviewComponent];
 
 @NgModule({
     declarations: [
-        OneWindowComponent, OneWindowSplitComponent, OneSidebarComponent, OnePopupComponent, OneNavbarComponent,
-        OnePageComponent, OneWindowSplitHost, OnePageHost, OneSidebarHost, OneSidebarGroupComponent, OneItemComponent,
-        OneMenuComponent, OneMenuDisplayComponent,
+        OneWindowComponent, OneWindowSplitComponent, OnePageComponent, OneNavbarComponent, OneListviewComponent,
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         RouterModule,
-    ],
-    bootstrap: [
-        OnePageHost,
+        BoundSensorModule,
     ],
     exports: components,
     entryComponents: components,

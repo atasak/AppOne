@@ -35,7 +35,7 @@
 // Modals
 // Alerts
 // Progress bars
-// List group
+// Collection group
 // Image thumbnails
 // Figures
 // Breadcrumbs
@@ -741,7 +741,7 @@ $progress-bar-bg:               theme-color("primary") !default;
 $progress-bar-animation-timing: 1s linear infinite !default;
 $progress-bar-transition:       width .6s ease !default;
 
-// List group
+// Collection group
 
 $list-group-bg:                  $white !default;
 $list-group-border-color:        rgba($black,.125) !default;
